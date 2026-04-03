@@ -1,4 +1,5 @@
 def cargar_dato():
+    
     nombre = input("Ingrese su nombre: \n")
     while True:
         try:
@@ -7,7 +8,14 @@ def cargar_dato():
         except ValueError:
             print("Por favor, ingrese un número válido para la edad.\n")
     clase = input("(por ejemplo: Guerrero, Mago o Arquero): \n").strip().lower()
-    return {"nombre": nombre, "edad": edad, "clase": clase}
+    
+    pj = {
+        "nombre": nombre,
+        "edad": edad,
+        "clase": clase,
+        "equipo": obtener_equipo(clase)
+    }
+    return pj
 
 def cargar_datos():
     datos = []
@@ -19,8 +27,8 @@ def cargar_datos():
     return datos
 
 def mostrar_dato(pj):
-    print(f"Nombre: {pj['nombre']}, Edad: {pj['edad']}, Clase: {pj['clase']}, Equipo: {obtener_equipo(pj['clase'])}")
-    
+    print(f"Nombre: {pj['nombre']}, Edad: {pj['edad']}, Clase: {pj['clase']}, Equipo: {pj['equipo']}")
+
 def mostrar_datos(datos):
     for pj in datos:
         mostrar_dato(pj)
@@ -39,7 +47,7 @@ def separador():
 def bienvenida():
     datos = cargar_datos()
     for pj in datos:
-        equipo = obtener_equipo(pj["clase"])
+        equipo = pj["equipo"]
         separador()
         if 18 <= pj["edad"] <= 40:
             print(f"\n😎¡Bienvenido al gremio, Nombre: {pj['nombre']}, Clase: {pj['clase']}!")
