@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Franco",
+        "edad": 30,
+        "clase": "mago",
+        "equipo": "B\u00e1culo y Libro de Hechizos"
+    },
+    {
+        "nombre": "Matias",
+        "edad": 17,
+        "clase": "humano",
+        "equipo": "Un palo del piso"
+    },
+    {
+        "nombre": "Matias",
+        "edad": 41,
+        "clase": "arquero",
+        "equipo": "Arco y Flechas"
+    },
+    {
+        "nombre": "Nicolas",
+        "edad": 31,
+        "clase": "arquero",
+        "equipo": "Arco y Flechas"
+    }
+]
